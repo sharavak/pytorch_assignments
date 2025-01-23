@@ -14,7 +14,7 @@ test_suite = []
 shapes = [[1, 2], [1, 2, 3], [5, 5], [2, 1, 2, 2], [1, 1]]
 
 for i in range(5):
-    input = torch.randn(shapes[i])
+    input = torch.randint(1,1000,shapes[i],dtype=torch.float32)
     dim = random.choice(list(range(0, input.ndim - 1)))
     test_suite.append([input, dim, t_softmax.forward(input, dim)])
 
