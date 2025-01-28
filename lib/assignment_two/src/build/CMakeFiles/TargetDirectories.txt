@@ -1,0 +1,3 @@
+/home/shar/pytorch_assignments/lib/assignment_two/src/build/CMakeFiles/cus_min.dir
+/home/shar/pytorch_assignments/lib/assignment_two/src/build/CMakeFiles/edit_cache.dir
+/home/shar/pytorch_assignments/lib/assignment_two/src/build/CMakeFiles/rebuild_cache.dir
