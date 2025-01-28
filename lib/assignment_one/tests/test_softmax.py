@@ -19,11 +19,9 @@ for i in range(5):
     test_suite.append([input, dim, t_softmax.forward(input, dim)])
 
 
-def convert_tensor(inp):
-    return torch.tensor(inp, dtype=torch.float)
 
 
-inp = convert_tensor([[1, 2, 3], [1, 2, 3]])
+inp = torch.tensor([[1, 2, 3], [1, 2, 3]])
 test_suite.append([inp, 0, t_softmax.forward(inp, 0)])
 
 
