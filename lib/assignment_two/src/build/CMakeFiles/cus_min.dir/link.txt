@@ -1,2 +1,0 @@
-/usr/bin/ar qc libcus_min.a CMakeFiles/cus_min.dir/cus_min.cpp.o
-/usr/bin/ranlib libcus_min.a
