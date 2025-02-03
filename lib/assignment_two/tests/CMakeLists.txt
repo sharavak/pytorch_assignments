@@ -3,8 +3,7 @@ project(test_torch_ops)
 enable_testing()
 set(GTEST_ROOT "../tests/googletest")
  
-set(Torch_DIR "/home/shar/libtorch/share/cmake/Torch")
-list(APPEND CMAKE_PREFIX_PATH "/home/shar/libtorch/share/cmake/Torch")
+
  
 find_package(Torch REQUIRED)
 find_package(GTest REQUIRED)

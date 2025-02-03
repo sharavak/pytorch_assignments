@@ -141,6 +141,9 @@ CMAKE_OBJCOPY:FILEPATH=/usr/bin/objcopy
 //Path to a program.
 CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
 
+//No help, variable specified on the command line.
+CMAKE_PREFIX_PATH:UNINITIALIZED=/home/shar/libtorch/share/cmake/Torch
+
 //Value Computed by CMake
 CMAKE_PROJECT_DESCRIPTION:STATIC=
 
@@ -226,6 +229,9 @@ MKL_DIR:PATH=MKL_DIR-NOTFOUND
 
 //Path to a library.
 TORCH_LIBRARY:FILEPATH=/home/shar/libtorch/lib/libtorch.so
+
+//The directory containing a CMake configuration file for Torch.
+Torch_DIR:PATH=/home/shar/libtorch/share/cmake/Torch
 
 //Path to a library.
 c10_LIBRARY:FILEPATH=/home/shar/libtorch/lib/libc10.so

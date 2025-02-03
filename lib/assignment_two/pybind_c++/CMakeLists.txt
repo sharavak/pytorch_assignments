@@ -2,9 +2,6 @@ cmake_minimum_required(VERSION 3.28.3)
 project(pybind_ops)
 
 
-set(Torch_DIR "/home/shar/libtorch/share/cmake/Torch")
-list(APPEND CMAKE_PREFIX_PATH "/home/shar/libtorch/share/cmake/Torch")
-
 find_package(pybind11 REQUIRED)
 find_package(Torch REQUIRED)
 
@@ -15,7 +12,7 @@ include_directories(${TORCH_INCLUDE_DIRS})
 
 
 file (GLOB SOURCE_FILES "cus_min_wrap.cpp")
-file (GLOB HEADER_FILES "/home/shar/libtorch/share/cmake/Torch" "../src/cus_min.h")
+file (GLOB HEADER_FILES "/absolute/path/to/libtorch" "../src/cus_min.h")
 
 
 pybind11_add_module(custom_min ${SOURCE_FILES} ${HEADER_FILES})

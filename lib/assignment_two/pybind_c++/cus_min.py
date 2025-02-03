@@ -1,5 +1,6 @@
-import sys,torch
-sys.path.append("/home/shar/pytorch_assignments/lib/assignment_two/pybind_c++/build")
+import sys,torch,os
+sys.path.append(os.getcwd()+"/build")
+print(os.getcwd())
 import custom_min
 from torch import nn
 
