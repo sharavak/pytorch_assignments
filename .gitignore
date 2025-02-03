@@ -1,3 +1,6 @@
-venv/
-.vscode/
+myvenv/
+/lib/assignment_three/tests/googletest
+/.vscode
+/.pytest_cache
+**/build/
 *.pyc
