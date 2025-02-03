@@ -1,3 +1,9 @@
+/lib/assignment_three/pybind_c++/myvenv
+/lib/assignment_three/tests/googletest
+/.vscode
+/.pytest_cache
+**/build/
+
 venv/
 .vscode/
 *.pyc
