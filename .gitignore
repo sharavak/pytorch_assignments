@@ -3,4 +3,7 @@
 /.vscode
 /.pytest_cache
 **/build/
+
+venv/
+.vscode/
 *.pyc

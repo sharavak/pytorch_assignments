@@ -1,138 +1,57 @@
 
-# Assignment -3
+# Assignment -1
 Decompose PyTorch operations using only the supported operations, and develop comprehensive pytest cases to validate the decomposed operations, ensuring all edge cases are covered. The implementation should be thoroughly documented, with well-structured and maintainable code.
 
+## Supported ops
+* torch.add
+* torch.sub
+* torch.mul
+* torch.div
 
 ## Ops needs to be Decomposed:
-* torch.addbmm 
-* torch.logaddexp
+* torch.pow
+* torch.nn.Softmax
 
 
----
 
-## Prerequisites
+## Table of Contents
 
-A compatible operating system (e.g. Linux, macOS, Windows).
-
-A compatible **C++ compiler** that supports at least C++11.
-
-**CMake** and a compatible build tool for building the project.
+- [Installation](#installation)
+- [Setting up the Development Environment](#setting-up-the-development-environment)
+- [Running Tests](#running-tests)
 
 ---
 
 ## Installation
 
 1. **Clone the repository:**
-    ```
 
-        https://github.com/sharavana20/pytorch_assignments.git
+    `https://github.com/sharavana20/pytorch_assignments.git`
 
-        cd pytorch_assignments
+    `cd pytorch_assignments`
 
-        git checkout assignment-3
-    ```
+    `git checkout assignment-1`
 
-    ---
+2. **Create a virtual environment**
 
-2. **Building the src folder**
-    ```
-        cd lib/assignment_three/src/
+    To install, make sure you have installed Python 3.12
 
-        mkdir build
-        
-        cd build
-        
-        cmake -DCMAKE_PREFIX_PATH=/absolute/path/to/libtorch ..
+    `python3 -m venv venv`
 
-        make
-    ```
+    `source venv/bin/activate - On Linux/MacOS`
 
-    ---
+    `venv\Scripts\activate - On Windows`
 
-3. **Building the tests folder**
+3. **Install project dependencies:**
 
-    *Make sure you have cloned the googletest repository inside the tests folder.*
-    ```
-    
-        cd assignment_three/tests/
-
-        mkdir build
-        
-        cd build
-        
-        cmake -DCMAKE_PREFIX_PATH=/absolute/path/to/libtorch ..
-
-        make
-    ```
-
-    ---
-
-4. **Building the pybind_c++ folder**
-    ```
-        cd assignment_three/pybind_c++/
-    ```
-    *set the path for libtorch in **file command** in cmake and then build it*
-
-    ```
-        
-        mkdir build
-        
-        cd build
-        
-        cmake -DCMAKE_PREFIX_PATH=/absolute/path/to/libtorch ..
-
-        make
-    ```
-
-    ---
+    `pip install -r requirements.txt`
 
 
 
-5. **Creating a virtual environment for pybind11_c++ folder**
-
-    To install, make sure you have installed **Python 3.10**
-    ```
-        cd assignment_three/pybind_c++/
-
-        python -m venv venv
-
-        source venv/bin/activate - On Linux/MacOS
-
-        venv\Scripts\activate - On Windows
-    ```
-
-    
-    *Installing it for the virtual environment*
-
-            pip install -r requirements.txt
-
-    ---
-
-
----
 ## Testing
 
-1. **Testing with gtest**
+`cd lib/assignment_one/tests`
 
-*Make sure you have the build folder*
+`pytest test_pow.py`
 
-```
-    cd assignment_three/tests/build
-
-    ./test_cusops
-```
-
-*Currently, I added the 3 testcases for each ops.*
-
----
-
-2. **Testing with pytest**
-
-
-    ```
-    cd assignment_three/pybind_c++
-
-    pytest test_addbmm.py
-
-    pytest test_logaddexp.py
-    ```
+`pytest test_softmax.py`
